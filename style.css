@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-size: 2.5rem;
+}
+
+img {
+    width: 55px;
+    height: 35px;
+}
+
+img, h1 {
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 5rem;
+    color: var(--transparent-white);
+}
+
+button {
+    font-family: 'Lexend Deca', san-serif;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: var(--very-light-gray);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    outline: solid 2px var(--very-light-gray);
+    color: var(--very-light-gray) !important;
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+}
+
+.sedan button {
+    color: var(--bright-orange);
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.suv button {
+    color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.container {
+    margin-inline: auto;
+    display: flex;
+    width: min(80%, 60rem);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card {
+    padding: 3rem;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
